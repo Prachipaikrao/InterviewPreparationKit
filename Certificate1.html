@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certificate Generator</title>
+  <style>
+    body {
+      background-color: #96DED1;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    nav ul li {
+      float: right;
+    }
+
+    nav ul li a {
+      display: block;
+      color: purple;
+      font-weight: bold;
+      text-align: center;
+      padding: 20px 22px;
+      text-decoration: none;
+    }
+
+    nav ul li a:hover {
+      background-color: grey;
+      color: white;
+    }
+
+    .form-container {
+      margin: 20px auto;
+      padding: 20px;
+      background: white;
+      width: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px gray;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+    }
+
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid gray;
+      border-radius: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: purple;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background: darkmagenta;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="FeedBack.html">FeedBack</a></li>
+      <li><a href="Contact.html">Contact</a></li>
+      <li><a href="Login.html">Login</a></li>
+      <li><a href="About.html">About</a></li>
+      <li><a href="FirstPage.html">Home</a></li>
+    </ul>
+  </nav>
+
+  <div class="form-container">
+    <h2>Certificate Generator</h2>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name">
+
+    <label for="position">Enter your position:</label>
+    <input type="text" id="position">
+
+    <label for="skills">Enter your skills:</label>
+    <input type="text" id="skills">
+
+    <label for="photo">Upload your photo:</label>
+    <input type="file" id="photo" accept="image/*">
+
+    <button onclick="generateCertificate()">Generate Certificate</button>
+  </div>
+
+  <!-- Canvas for certificate -->
+  <canvas id="certificateCanvas" width="1000" height="700" style="margin-top:20px; border:2px solid black; display:none;"></canvas>
+  <br>
+  <a id="downloadLink" style="display:none;">Download Certificate</a>
+
+  <script>
+    function generateCertificate() {
+      var name = document.getElementById('name').value;
+      var position = document.getElementById('position').value;
+      var skills = document.getElementById('skills').value;
+      var photoInput = document.getElementById('photo').files[0];
+
+      var canvas = document.getElementById('certificateCanvas');
+      var ctx = canvas.getContext('2d');
+      canvas.style.display = "block";
+
+      // Background
+      ctx.fillStyle = "#fffdf5";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Border
+      ctx.strokeStyle = "black";
+      ctx.lineWidth = 10;
+      ctx.strokeRect(20, 20, canvas.width - 40, canvas.height - 40);
+
+      // Title
+      ctx.fillStyle = "black";
+      ctx.font = "bold 50px Arial";
+      ctx.textAlign = "center";
+      ctx.fillText("Certificate of Achievement", canvas.width/2, 120);
+
+      // Subtitle
+      ctx.font = "20px Arial";
+      ctx.fillText("This certificate is proudly presented to", canvas.width/2, 200);
+
+      // Name
+      ctx.font = "bold 40px Arial";
+      ctx.fillText(name, canvas.width/2, 270);
+
+      // Details
+      ctx.font = "22px Arial";
+      ctx.fillText("For outstanding performance as " + position, canvas.width/2, 340);
+      ctx.fillText("and for skills in " + skills, canvas.width/2, 380);
+
+      // Date
+      ctx.font = "18px italic Arial";
+      ctx.fillText("Date: " + new Date().toDateString(), canvas.width/2, 450);
+
+      // Signature placeholders
+      ctx.font = "20px Arial";
+      ctx.textAlign = "left";
+      ctx.fillText("__________________", 150, 550);
+      ctx.fillText("Authorized Sign", 180, 580);
+
+      ctx.textAlign = "right";
+      ctx.fillText("__________________", canvas.width-150, 550);
+      ctx.fillText("Director", canvas.width-170, 580);
+
+      // Add photo if uploaded
+      if (photoInput) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+          var img = new Image();
+          img.onload = function() {
+            ctx.drawImage(img, canvas.width/2 - 60, 500, 120, 120); // photo in bottom center
+            saveCertificate();
+          }
+          img.src = e.target.result;
+        }
+        reader.readAsDataURL(photoInput);
+      } else {
+        saveCertificate();
+      }
+    }
+
+    function saveCertificate() {
+      var canvas = document.getElementById('certificateCanvas');
+      var image = canvas.toDataURL("image/png");
+      var downloadLink = document.getElementById('downloadLink');
+      downloadLink.href = image;
+      downloadLink.download = "certificate.png";
+      downloadLink.style.display = "block";
+      downloadLink.textContent = "Download Certificate";
+    }
+  </script>
+</body>
+</html>

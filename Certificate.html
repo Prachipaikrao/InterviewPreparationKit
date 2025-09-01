@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Certificate For Developer</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1></h1>
+    <form id="certificateForm">
+      <label for="ame"> Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="courseName">Course Name:</label>
+      <input type="text" id="courseName" required>
+
+      
+
+      <label for="designation">Designation:</label>
+      <input type="text" id="designation" required>
+
+      <button type="submit">Generate Certificate</button>
+    </form>
+
+    <div id="certificateOutput" class="certificate-preview hidden">
+      <h2> Certificate</h2>
+      <div id="certificateContent"></div>
+      <button id="downloadBtn" class="hidden">Download</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

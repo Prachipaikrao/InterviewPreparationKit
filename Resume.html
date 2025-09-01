@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Resume Form</title>
+<style>
+   table {
+      border-collapse: collapse;
+      width: 60%;
+      margin: 20px auto;
+   }
+   th, td {
+      border: 1px solid black;
+      padding: 10px;
+      text-align: left;
+   }
+   h1 {
+      text-align: center;
+   }
+   input[type="text"] {
+      width: 95%;
+      padding: 5px;
+   }
+   input[type="submit"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+   }
+</style>
+</head>
+<body>
+<form action="ResumeServlet" method="post">
+   <h1>Resume</h1>
+   <table>
+      <tr><td>Name</td><td><input type="text" name="name"></td></tr>
+      <tr><td>Email</td><td><input type="text" name="email"></td></tr>
+      <tr><td>Phone</td><td><input type="text" name="phone"></td></tr>
+      <tr><td>Education</td><td><input type="text" name="edu"></td></tr>
+      <tr><td>Education 2</td><td><input type="text" name="edu1"></td></tr>
+      <tr><td>Project 1</td><td><input type="text" name="project1"></td></tr>
+      <tr><td>Project 2</td><td><input type="text" name="project2"></td></tr>
+      <tr><td>Project 3</td><td><input type="text" name="project3"></td></tr>
+      <tr><td>Skill 1</td><td><input type="text" name="skill1"></td></tr>
+      <tr><td>Skill 2</td><td><input type="text" name="skill2"></td></tr>
+      <tr><td>Skill 3</td><td><input type="text" name="skill3"></td></tr>
+      <tr><td>Programming Language 1</td><td><input type="text" name="skillLanguage1"></td></tr>
+      <tr><td>Programming Language 2</td><td><input type="text" name="skillLanguage2"></td></tr>
+      <tr><td>Programming Language 3</td><td><input type="text" name="skillLanguage3"></td></tr>
+      <tr><td>Languages Known 1</td><td><input type="text" name="LanguagesKnown"></td></tr>
+      <tr><td>Languages Known 2</td><td><input type="text" name="LanguagesKnown1"></td></tr>
+      <tr><td>Strength 1</td><td><input type="text" name="Strength1"></td></tr>
+      <tr><td>Strength 2</td><td><input type="text" name="Strength2"></td></tr>
+      <tr><td>Weakness 1</td><td><input type="text" name="Weakness1"></td></tr>
+      <tr><td>Weakness 2</td><td><input type="text" name="Weakness2"></td></tr>
+      <tr><td>Long Term Goal 1</td><td><input type="text" name="LongTermGoal1"></td></tr>
+      <tr><td>Long Term Goal 2</td><td><input type="text" name="LongTermGoal2"></td></tr>
+      <tr><td>Short Term Goal 1</td><td><input type="text" name="ShortTermGoal1"></td></tr>
+      <tr><td>Short Term Goal 2</td><td><input type="text" name="ShortTermGoal2"></td></tr>
+      <tr><td>Certification 1</td><td><input type="text" name="Certification1"></td></tr>
+      <tr><td>Certification 2</td><td><input type="text" name="Certification2"></td></tr>
+      <tr><td>Summary</td><td><input type="text" name="Summary"></td></tr>
+   </table>
+   <input type="submit" value="Register">
+</form>
+</body>
+</html>

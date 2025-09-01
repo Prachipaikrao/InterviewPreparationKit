@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Feedback</title>
+   <style>
+   body {
+     background-color:#96DED1;
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0; /* ✅ removed top padding */
+   }
+
+   /* ✅ Fixed Navbar */
+   nav {
+      width: 100%;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: fixed;   /* navbar fixed at top */
+      top: 0;
+      left: 0;
+      z-index: 10;
+   }
+
+   nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+   }
+
+   nav ul li {
+      margin: 0 10px;
+   }
+
+   nav ul li a {
+      display: block;
+      color: purple;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      padding: 14px 20px;
+      border-radius: 5px;
+      transition: 0.3s;
+   }
+
+   nav ul li a:hover {
+      background-color: grey;
+      color: white;
+   }
+
+   /* ✅ Layout */
+   .parent {
+     margin-top: 90px; /* ✅ pushes form just below navbar */
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     padding: 1rem;
+     flex-wrap: wrap;
+   }
+   .c {
+     height: 300px;
+     width: 450px;
+     background-image:url("F.jpg");
+     background-size:cover;
+     background-position:center;
+     border-radius: 10px;
+     margin: 10px;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+   }
+   .child1 {
+     border: 1px solid #ddd;
+     padding: 1rem;
+     width: 450px;
+     background: white;
+     border-radius: 10px;
+     text-align: center;
+     margin: 10px;
+     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+   }
+
+   /* ✅ Form */
+   .form-box {
+     width: 90%;
+     margin: auto;
+     padding: 15px;
+   }
+   .form-box label {
+     font-weight: bold;
+     color: purple;
+   }
+   .form-box input {
+     width: 95%;
+     padding: 10px;
+     margin: 10px 0;
+     font-size: 16px;
+     border: 1px solid #ccc;
+     border-radius: 5px;
+   }
+   .form-box button {
+     height: 40px;
+     width: 120px;
+     background: purple;
+     color:white;
+     border:none;
+     border-radius:5px;
+     cursor:pointer;
+     font-size:16px;
+     transition: 0.3s;
+   }
+   .form-box button:hover {
+     background: grey;
+   }
+
+   /* ✅ Scrolling text inside form */
+   .scroll-text {
+     width: 100%;
+     overflow: hidden;
+     white-space: nowrap;
+     box-sizing: border-box;
+     margin-top: 10px;
+   }
+   .scroll-text span {
+     display: inline-block;
+     padding-left: 100%;
+     animation: scroll 10s linear infinite;
+     color: purple;
+     font-weight: bold;
+   }
+   @keyframes scroll {
+     0% { transform: translateX(0); }
+     100% { transform: translateX(-100%); }
+   }
+   </style>
+   <script>
+   function register() {
+     alert("✅ Feedback submitted successfully!");
+   }
+   </script>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<nav>
+  <ul>
+    <li><a href="FeedBack.html">Feedback</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="Registartion.html">Registration</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Home1.html">Home</a></li>
+  </ul>
+</nav>
+
+<!-- ✅ Feedback Form -->
+<form action="FeedbackServlet" method="post">
+  <div class='parent'>
+    <!-- Left Image -->
+    <div class='c'></div>
+
+    <!-- Right Form -->
+    <div class='child1'>
+      <legend style="font-size:22px; color:purple; font-weight:bold;">WE VALUE YOUR ADVICE</legend>
+      <hr style="width:250px; margin:auto; margin-bottom:15px;">
+
+      <div class="form-box">
+        <label for="idea">What is Your Idea?</label><br>
+        <input type="text" id="idea" name="idea" required><br>
+
+        <label for="suggestion">Any Suggestion?</label><br>
+        <input type="text" id="suggestion" name="suggestion" required><br>
+
+        <label for="newidea">Share Your New Idea!</label><br>
+        <input type="text" id="newidea" name="newidea" required><br>
+
+        <!-- Scrolling text -->
+        <div class="scroll-text"><span> You Are Unique In Your Own Way </span></div><br>
+
+        <button type="submit" onclick="register()">SEND</button>
+      </div>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+.div
+{
+
+border:2px solid black;
+text-align: center;
+height:600px;
+width:100%;
+}
+
+.image
+{
+
+ height: 100px;
+   width: 50%;
+   
+   margin-top:1px;
+
+
+    background-repeat: no-repeat, no-repeat;
+}
+
+ul {
+
+  list-style-type: none;
+
+  margin: 0;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  background-color: white;
+
+}
+
+
+
+li {
+
+  float: right;
+
+}
+
+
+
+li a {
+
+  display: block;
+
+  color: purple;
+
+  font:bold;
+
+  text-align: center;
+
+  text-space:20px;
+
+  text-size:30px;
+
+  padding: 20px 22px;
+
+  text-decoration: none;
+
+}
+li a:hover {
+
+  background-color: grey;
+
+}
+
+.div
+{
+ height:5px;
+   width: 50%;
+margin-left:20%;
+
+
+}
+
+.divv { display: flex;
+				margin-top:10px;
+				margin-left:150px;
+			}
+			.divvv {
+			 
+				  flex-basis: 400px;
+				  height: 300px;
+				 margin: 5px;
+				}
+
+
+</style>
+</head>
+<body style="background-color:#93C572;text-align: center ;">
+<form method="post" action="AttendenceServlet">
+<nav class="navbar">
+
+      <ul>
+ <li><a href="#login"><b>Login</b></a></li>
+   <li><a href="#about"><b>About</b></a></li>
+    <li><a href="#contact"><b>Contact</b></a></li>
+  <li><a class="active" href="#home"><b>Home</b></a></li>
+
+</ul>
+</nav>
+
+                <br><br>
+            <legend>ATTENDENCE</legend>
+            <hr style="width:200px">
+<br>
+<br>
+ 
+ <div style="height:300px ;width:30% ;border:2px solid white;margin-left:35%">
+ <label for="user">User</label><br>
+
+ <input type="text"  name="name" required><br><br>
+
+    <label for="passl">Password</label><br>
+     <input type="text" id="pass" name="password" required><br><br>
+      <label for="phone">Phone</label><br>
+    
+ <input type="pass" name="pass" required><br><br>
+ <br><marquee> Valid No. </marquee><br>
+      <label for="passl">Address</label><br>
+
+  <input type="pass" id="address" name="address" required><br><br>
+
+   <input type="submit" value="Register">
+   
+   </div>
+   </div>
+</body>
+</html>

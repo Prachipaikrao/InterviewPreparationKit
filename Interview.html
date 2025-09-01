@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Interview Questions</title>
+<style>
+/* Navigation Bar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: purple;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 20px;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: grey;
+}
+
+/* Body Background */
+.b {
+  background-color: #96DED1;
+  font-family: Arial, sans-serif;
+}
+
+/* Layout Containers */
+.parent {
+  margin-left: 1px;
+  padding: 2rem;
+  text-align: center;
+  width: 90%;
+}
+
+.c {
+  display: inline-block;
+  padding: 1rem;
+  margin-top: 100px;
+  height: 300px;
+  width: 600px;
+  text-align: center;
+  vertical-align: middle;
+  background-image: url("InterviewImage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.child1 {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 1rem;
+  height: auto;
+  width: 500px;
+  text-align: left;
+  vertical-align: top;
+  float: right;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Form Styling */
+.child1 legend {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+  color: purple;
+}
+
+.child1 label {
+  display: block;
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.child1 input[type="text"] {
+  width: 95%;
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.child1 input[type="submit"] {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: purple;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.child1 input[type="submit"]:hover {
+  background: darkviolet;
+}
+</style>
+</head>
+
+<body class="b">
+
+<form action="InterviewQuestions" method="post">
+  <div class="parent">
+    
+    <div class="c"></div>
+
+    <div class="child1">
+      <legend>Interview Questions</legend>
+      <hr>
+
+      <label>Q.1 How many threads can access a monitor at a time?  
+        <input type="text" name="a1">
+      </label>
+      <hr>
+
+      <label>Q.2 Who creates the main thread?  
+        <input type="text" name="a2">
+      </label>
+      <hr>
+
+      <label>Q.3 Are exceptions detected during runtime?  
+        <input type="text" name="a3">
+      </label>
+      <hr>
+
+      <input type="submit" value="Submit Mock">
+    </div>
+
+  </div>
+</form>
+
+</body>
+</html>

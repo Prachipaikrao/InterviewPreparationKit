@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Contact Page</title>
+<style>
+body {
+  background: linear-gradient(135deg, #96DED1, #E3FDFD);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: purple;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+    color: white;
+}
+
+/* ✅ Section Container */
+.parent {
+  margin: 7rem 1rem 2rem;
+  padding: 2rem;
+  text-align: center;
+}
+.parent h3 {
+  font-size: 28px;
+  color: purple;
+  margin-bottom: 2rem;
+}
+
+/* ✅ Contact Info Cards */
+.contact-boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.child {
+  flex: 1 1 280px;
+  max-width: 300px;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.child:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+.child p:first-child {
+  font-weight: bold;
+  font-size: 18px;
+  color: purple;
+}
+.child a {
+  color: teal;
+  font-weight: 600;
+  text-decoration: none;
+}
+.child a:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Contact Form */
+legend {
+  font-size: 26px;
+  color: purple;
+  font-weight: bold;
+  margin-top: 30px;
+}
+hr {
+  width: 200px;
+  border: 1px solid purple;
+  margin: 10px auto 30px;
+}
+
+.contact-form {
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.contact-form label {
+  font-weight: 600;
+  color: #333;
+  display: block;
+  text-align: left;
+  margin: 10px 0 5px;
+}
+.contact-form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.contact-form input:focus {
+  border-color: purple;
+  box-shadow: 0 0 8px rgba(128,0,128,0.3);
+  outline: none;
+}
+.contact-form input[type="submit"] {
+  background: purple;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+.contact-form input[type="submit"]:hover {
+  background: darkmagenta;
+  transform: scale(1.03);
+}
+</style>
+
+<script>
+function register() {
+  alert("✅ Contact request submitted successfully!");
+}
+</script>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<nav>
+  <ul>
+    <li><a href="FeedBack.html">Feedback</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="Registartion.html">Registration</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Home1.html">Home</a></li>
+  </ul>
+</nav>
+
+<!-- ✅ Contact Info -->
+<div class="parent">
+  <h3>You Can Contact Us By</h3>
+  <div class="contact-boxes">
+    <div class="child">
+      <p>Email Address</p>
+      <p><a href="mailto:paikraoprachi@gmail.com">Send Email</a></p>
+    </div>
+    <div class="child">
+      <p>Working Address</p>
+      <p><a href="https://maps.app.goo.gl/8UpLav3oemujQSvx7">Map</a></p>
+    </div>
+    <div class="child">
+      <p>Phone Number</p>
+      <p><a href="tel:+4733378901">Call Us</a></p>
+    </div>
+  </div>
+</div>
+
+<!-- ✅ Contact Form -->
+<legend>Contact Details</legend>
+<hr>
+
+<form method="post" action="ContactServlet" class="contact-form">
+  <label for="user">Email Address</label>
+  <input type="email" id="user" name="email" required>
+
+  <label for="area">Area of Interest</label>
+  <input type="text" id="area" name="area" required>
+
+  <label for="phone">Phone No.</label>
+  <input type="tel" id="phone" name="phone" required>
+
+  <label for="address">Address</label>
+  <input type="text" id="address" name="address" required>
+
+  <input type="submit" onclick="register()" value="Submit Contact">
+</form>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Mock Interview Form</title>
+<style>
+/* Navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: purple;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 18px;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: grey;
+}
+
+/* Background */
+.b {
+  background-color: #96DED1;
+  font-family: Arial, sans-serif;
+}
+
+/* Container */
+.parent {
+  margin: 40px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem;
+}
+
+/* Left image box */
+.c {
+  flex: 1;
+  height: 400px;
+  background-image: url("InterviewMarksImages.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* Right form box */
+.child1 {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Form elements */
+.child1 label {
+  display: block;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+.child1 input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+.child1 input[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.child1 input[type="submit"]:hover {
+  background: darkviolet;
+}
+</style>
+</head>
+<body class="b">
+
+<div class="parent">
+  <!-- Left box with image -->
+  <div class="c"></div>
+
+  <!-- Right box with form -->
+  <div class="child1">
+    <h2>Submit Mock Interview marks</h2>
+    <form action="Iservlet" method="post">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name">
+
+      <label for="position">Position:</label>
+      <input type="text" id="position" name="position">
+
+      <label for="marks">Marks:</label>
+      <input type="text" id="marks" name="marks">
+
+      <input type="submit" value="Submit Mock">
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

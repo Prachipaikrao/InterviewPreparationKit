@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration</title>
+<style>
+body {
+    background: linear-gradient(135deg, #96DED1, #AAFFCC);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: purple;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+    color: white;
+}
+/* Main container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    flex-grow: 1;
+    padding: 50px 20px;
+}
+
+/* Image */
+.image-section {
+    width: 600px;      /* Adjusted width */
+    height: 400px;     /* Reduced height */
+    background-image: url("reg.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Form */
+.form-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 15px;
+    width: 500px; /* Reduced form width */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    text-align: left;
+}
+
+.form-section h2 {
+    text-align: center;
+    color: #4B0082;
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+.form-section label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-section input[type="text"],
+.form-section input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-section input[type="text"]:focus,
+.form-section input[type="password"]:focus {
+    border-color: #4B0082;
+    box-shadow: 0 0 5px rgba(75,0,130,0.5);
+    outline: none;
+}
+
+.form-section input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4B0082;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.form-section input[type="submit"]:hover {
+    background-color: #6a1b9a;
+}
+
+/* Responsive */
+@media(max-width: 900px) {
+    .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .image-section,
+    .form-section {
+        width: 90%;
+        height: auto;
+    }
+}
+</style>
+<script>
+function register() {
+    alert("Registration Successful!");
+}
+</script>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="FeedBack.html">FEEDBACK</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+        <li><a href="Login.html">LOGIN</a></li>
+        <li><a href="About.html">ABOUT</a></li>
+        <li><a href="Home1.html">HOME</a></li>
+    </ul>
+</nav>
+
+<!-- Main Container -->
+<div class="container">
+    <!-- Image Section -->
+    <div class="image-section"></div>
+
+    <!-- Form Section -->
+    <form class="form-section" method="post" action="RegistrationServlet">
+        <h2>Registration Form</h2>
+
+        <label for="user">User</label>
+        <input type="text" id="user" name="user" required>
+
+        <label for="pass">Password</label>
+        <input type="password" id="pass" name="password" required>
+
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="city">City</label>
+        <input type="text" id="city" name="city" required>
+
+        <label for="country">Country</label>
+        <input type="text" id="country" name="country" required>
+
+        <label for="phone">Phone No.</label>
+        <input type="text" id="phone" name="no" required>
+
+        <input type="submit" onclick="register()" value="Register">
+    </form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us</title>
+<style>
+/* Body */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #96DED1, #AAFFCC);
+    min-height: 100vh;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: purple;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 14px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: grey;
+    color: white;
+}
+
+/* Main container */
+.parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 50px 20px;
+}
+
+/* Image section */
+.c {
+    width: 700px;
+    height: 550px;
+    background-image: url("Waterfall.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Content section */
+.child1 {
+    max-width: 700px;
+  
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.child1 legend {
+    font-size: 28px;
+    font-weight: bold;
+    color: #4B0082;
+}
+
+.child1 hr {
+    width: 60%;
+    margin: 15px auto;
+    border: 1px solid #4B0082;
+}
+
+/* Animated scrolling clickable link inside form */
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+.scroll-text a {
+    display: inline-block;
+    color: #FF8C00;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 10px;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.child1 h1, .child1 h2, .child1 h3 {
+    margin: 12px 0;
+}
+
+.child1 h1 { font-size: 22px; color: brown; }
+.child1 h2 { font-size: 20px; color: black; }
+.child1 h3 { font-size: 18px; color: purple; }
+
+/* Responsive */
+@media(max-width: 900px) {
+    .parent {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .c, .child1 {
+        width: 90%;
+        height: auto;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+    <ul>
+        <li><a href="FeedBack.html">Feedback</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Registartion.html">Registration</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Home1.html">Home</a></li>
+    </ul>
+</nav>
+
+<!-- Content -->
+<div class="parent">
+    <!-- Image -->
+    <div class="c"></div>
+
+    <!-- Text Section (Form-style box) -->
+    <div class="child1">
+        <legend>Key For Success</legend>
+        <hr>
+        <!-- Scrollable clickable link inside form -->
+        <div class="scroll-text">
+            <a href="https://www.example.com" target="_blank">YOU ARE UNIQUE IN YOUR OWN WAY - Click Here!</a>
+        </div>
+        <h1>1. First Listen</h1>
+        <h2>2. Second Understand</h2>
+        <h3>3. Third Follow</h3>
+    </div>
+</div>
+
+</body>
+</html>

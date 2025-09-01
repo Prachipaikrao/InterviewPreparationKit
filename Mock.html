@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mock Questions</title>
+<style>
+/* Global */
+body.b {
+  background-color:#96DED1;
+  font-family: Arial, sans-serif;
+  margin:0;
+  padding:0;
+}
+
+/* Navbar */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+}
+li {
+  float: right;
+}
+li a {
+  display: block;
+  color: purple;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px 22px;
+  text-decoration: none;
+}
+li a:hover {
+  background-color: grey;
+  color: white;
+}
+
+/* Layout */
+.parent {
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+}
+.c {
+  display: inline-block;
+  margin-top: 100px;
+  height: 300px;
+  width: 600px;
+  background-image:url("servlet.jpg");
+  background-size: cover;
+  background-position: center;
+  float:left;
+  border-radius:10px;
+}
+.child1 {
+  display: inline-block;
+  padding: 1rem;
+  width: 500px;
+  min-height: 500px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  float:right;
+}
+
+/* Text & headings */
+marquee {
+  font-size: 18px;
+  color: darkblue;
+}
+legend {
+  font-size: 22px;
+  font-weight: bold;
+}
+label {
+  display:block;
+  margin: 15px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Button */
+button {
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background: purple;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: darkviolet;
+}
+</style>
+</head>
+<body class="b">
+
+<form action="MockServlet" method="post">
+
+<!-- Navbar -->
+<nav class="navbar">
+  <ul>
+    <li><a href="FeedBack.html">FeedBack</a></li>
+    <li><a href="Registartion.html">Register</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+    <li><a href="Home.html">Home</a></li>
+  </ul>
+</nav>
+
+<div class="parent">
+  <div class="c"></div>
+
+  <div class="child1">
+    <marquee> Solve By Own <mark>Solve Each Question</mark> </marquee>
+    <legend>Mock Questions</legend>
+    <hr><br>
+
+    <label>Q.1 What Is Long Form Of JDBC 
+      <input type="text" name="a1">
+    </label>
+    <hr><br>
+
+    <label>Q.2 Java is 100% Object Oriented Programming Language?
+      <input type="text" name="a2">
+    </label>
+    <hr><br>
+
+    <label>Q.3 What is priority of MAX 
+      <input type="text" name="a3">
+    </label>
+    <hr><br>
+
+    <button type="submit">Submit</button>
+  </div>
+</div>
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Projects</title>
+<style>
+/* Reset & basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #96DED1;
+    text-align: center;
+    color: #333;
+}
+
+/* Navbar */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: purple;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Project cards container */
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Individual project card */
+.child {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.child:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.child p {
+    margin: 10px 0;
+}
+
+/* Project images */
+.image
+{
+
+ height: 100px;
+   width: 50%;
+   
+   margin-top:1px;
+
+
+    background-repeat: no-repeat, no-repeat;
+}
+.image0
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("image0.jpg");
+}
+.image1
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("Trick2.png");
+}
+.image2
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("TimeUp.png");
+}
+.image3
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("get_Question.png");
+}
+.image4
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("HackTivist_Index.png");
+}
+.image5
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("total_Content.png");
+}
+
+.image6
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("xampp.png");
+}
+.image7
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("corejava.png");
+}
+.image8
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("core.png");
+}
+.image9
+{
+margin-left:30%;
+height:300px ;
+width:40% ;
+border:2px solid white;
+background-image:url("xampp.png");
+}
+
+/* Headings */
+h2, h3 {
+    color: purple;
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+/* Legends & horizontal rules */
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+    margin-top: 3rem;
+}
+
+hr {
+    border: none;
+    height: 2px;
+    background-color: purple;
+    width: 200px;
+    margin: 1rem auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .child, .image0, .image1, .image2, .image3, .image4, .image5, .image6, .image7, .image8, .image9, .div2, .image11 {
+        width: 80%;
+    }
+    li {
+        float: none;
+        text-align: center;
+    }
+    li a {
+        padding: 12px 0;
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<div>
+    <ul>
+        <li><a href="FeedBack.html"><b>FEEDBACK</b></a></li>
+        <li><a href="https://github.com/Prachipaikrao">MY WORKS</a></li>
+        <li><a href="Contact.html">CONTACT</a></li>
+        <li><a href="Project_Skills.html">PROJECTSKILLS</a></li>
+        <li><a href="Registartion.html">HOME</a></li>
+    </ul>
+</div>
+
+<!-- Project Cards -->
+<div class='parent'>
+    <h3>My Projects</h3> 
+    <div class='child'>
+        <p>GitHub</p>
+        <p><a href="https://github.com/Prachipaikrao">GitHub Profile</a></p>
+    </div>
+    <div class='child'>
+        <p>Core Java Project</p>
+        <p><a href="https://github.com/Prachipaikrao/Core-Java_Project">Java Project</a></p>
+    </div>
+    <div class='child'>
+        <p>C Language Project</p>
+        <p><a href="https://github.com/Prachipaikrao/C-Language-project">C Project</a></p>
+    </div>
+    <div class='child'>
+        <p>HTML/CSS/JavaScript Project</p>
+        <p><a href="https://github.com/Prachipaikrao/Htricks">Project Link</a></p>
+    </div>
+</div>
+
+<!-- Project Details -->
+<legend>Project Details</legend>
+<hr style="width:200px">
+
+<div class="div2"></div>
+<h2>Project Name: Tips And Tricks!</h2>
+<div class="image1"></div>
+<h2>Skills Languages:</h2>
+<h2>1. HTML</h2>
+<h2>2. CSS</h2>
+<h2>3. JavaScript</h2>
+<h2>4. PHP</h2>
+<h2>5. XAMPP</h2>
+
+<h2>Project Name: BackgroundColourChanger!</h2>
+<div class="image0"></div>
+<h2>Skills Languages:</h2>
+<h2>1. ReactJs</h2>
+
+<h2>Project Name: Another ReactJs Project</h2>
+<div class="image11"></div>
+<h2>Skills Languages:</h2>
+<h2>1. ReactJs</h2>
+
+<div class="image2"></div>
+<h2>Quiz by Using JavaScript!</h2>
+
+<div class="image3"></div>
+<h2>Provided Questions Short Tricks!</h2>
+
+<div class="image4"></div>
+<h2>Index Page of Tips And Tricks!</h2>
+
+<div class="image5"></div>
+<h2>Total Modules Used in Index Page!</h2>
+
+<div class="image6"></div>
+<h2>XAMPP is used to store data</h2>
+
+<div class="image7"></div>
+<h2>Core Java</h2>
+
+<div class="image8"></div>
+<h2>Core Java Output</h2>
+
+</body>
+</html>
